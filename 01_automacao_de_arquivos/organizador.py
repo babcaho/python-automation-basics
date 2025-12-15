@@ -10,4 +10,9 @@ def analisar_arquivos():
             extensoes[ext] = extensoes.get(ext, 0) + 1
 
     return extensoes
+resultado = analisar_arquivos()
+
+print("Resumo dos arquivos:")
+for ext, qtd in resultado.items():
+    print(f".{ext}: {qtd} arquivo(s)")
 

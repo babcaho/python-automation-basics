@@ -1,24 +1,38 @@
 import sqlite3
 
-conexao = sqlite3.connect("dados.db")
-cursor = conexao.cursor()
+def criar_tabela(cursor):
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS usuarios (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            nome TEXT
+        )
+    """)
 
-cursor.execute("""
-CREATE TABLE IF NOT EXISTS usuarios (
-    id INTEGER PRIMARY KEY,
-    nome TEXT
-)
-""")
+def inserir_usuario(cursor, nome):
+    cursor.execute("INSERT INTO usuarios (nome) VALUES (?)", (nome,))
 
-cursor.execute("INSERT INTO usuarios (nome) VALUES ('Maria')")
-cursor.execute("INSERT INTO usuarios (nome) VALUES ('João')")
+def listar_usuarios(cursor):
+    cursor.execute("SELECT * FROM usuarios")
+    return cursor.fetchall()
 
-conexao.commit()
+def main():
+    conexao = sqlite3.connect("usuarios.db")
+    cursor = conexao.cursor()
 
-cursor.execute("SELECT * FROM usuarios")
-usuarios = cursor.fetchall()
+    criar_tabela(cursor)
 
-for u in usuarios:
-    print(u)
+    inserir_usuario(cursor, "Maria")
+    inserir_usuario(cursor, "João")
+    inserir_usuario(cursor, "Ana")
 
-conexao.close()
+    conexao.commit()
+
+    usuarios = listar_usuarios(cursor)
+    print("Usuários cadastrados:")
+    for u in usuarios:
+        print(u)
+
+    conexao.close()
+
+if __name__ == "__main__":
+    main()

@@ -1,29 +1,30 @@
-# Python Automation & Fundamentals Portfolio
+# Portfólio de Lógica e Automação com Python
 
-Este repositório reúne projetos práticos desenvolvidos em Python com foco em
-automação, análise de dados, banco de dados, fundamentos de inteligência artificial
-e blockchain.
+Repositório que reúne projetos desenvolvidos durante meus estudos iniciais em Python. O foco está na aplicação prática de lógica de programação para resolver problemas cotidianos, com conceitos introdutórios de automação, dados, banco de dados e fundamentos de IA.
 
-O objetivo é demonstrar, de forma prática e didática, a aplicação de lógica de
-programação para resolver problemas reais, simulando cenários encontrados no
-mercado de trabalho.
+## Estrutura do Repositório
 
-## Tecnologias e Conceitos Utilizados
-- Python
-- Lógica de Programação
-- Automação de Processos
-- Análise de Dados (básico)
-- SQL com SQLite (básico)
+Cada pasta contém um mini-projeto independente:
+
+| Projeto | Descrição | Conceitos aplicados |
+|---|---|---|
+| `01_automacao_de_arquivos` | Script que organiza automaticamente arquivos em pastas por extensão. | Manipulação de diretórios, laços, dicionários. |
+| `02_analise_de_dados_com_python` | Leitura e sumarização de dados de vendas a partir de arquivo CSV. | Leitura de arquivos, listas, dicionários. |
+| `03_sistema_com_sql` | Sistema simples de cadastro com persistência em banco SQLite. | SQL básico, CRUD, integração Python-SQLite. |
+| `04_bot_inteligente_simples` | Classificador de texto baseado em regras para simular IA. | Estruturas condicionais, processamento de strings. |
+| `05_registro_blockchain_simples` | Simulação de uma cadeia de blocos com hash e validação. | Hashing, estruturas de dados, conceitos de blockchain. |
+
+## Tecnologias utilizadas
+
+- Python 3
+- SQLite
 - Git e GitHub
-- Inteligência Artificial (fundamentos)
-- Blockchain (fundamentos)
 
-## Projetos
-1. Automação de organização de arquivos
-2. Análise de dados a partir de arquivo CSV
-3. Sistema simples com banco de dados SQLite
-4. Classificador de texto (IA básica)
-5. Simulação de blockchain em Python
+## Como utilizar
 
-Cada projeto possui um README próprio explicando o funcionamento, conceitos
-aplicados e relevância prática.
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/bcarv-eng/python-logica-exercicios.git
+  
+2. Navegue até a pasta do projeto desejado.
+3. Execute o script Python correspondente.

@@ -28,3 +28,8 @@ Cada pasta contém um mini-projeto independente:
   
 2. Navegue até a pasta do projeto desejado.
 3. Execute o script Python correspondente.
+
+## Autora
+
+**Barbara Carvalho**  
+[LinkedIn](https://linkedin.com/in/bcarv-eng)
